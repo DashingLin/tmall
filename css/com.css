@@ -1,0 +1,302 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-size: 12px;
+}
+
+.second {
+    width: 1230px;
+    margin: 0 auto; /*块元素居中*/
+    /*background: seagreen;*/
+}
+
+/*tmall nav*/
+.first {
+    background: #f2f2f2;
+    height: 33px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.s-second {
+    height: 32px;
+    line-height: 32px;
+    color: #999;
+}
+
+.s-login a, .s-login span {
+    /*background: #ffffc0;*/
+    float: left;
+}
+
+.s-login a {
+    padding: 0 10px 0 10px;
+    color: #999;
+    /*background: darkturquoise;*/
+}
+
+.s-login a:hover {
+    color: #FF0036;
+}
+
+#s-l-btn {
+    padding-left: 20px;
+}
+
+.s-menu {
+    float: right;
+    /*background: #fff98e;*/
+}
+
+.s-menu-1 {
+    float: left;
+}
+
+.s-menu-1 > a {
+    padding: 0 14px; /*上右下左*/
+}
+
+.s-menu-1 a {
+    color: #999999;
+    display: block; /*让链接和div一样高*/
+}
+
+.s-menu-2 {
+    position: relative;
+}
+
+.s-menu-2:hover {
+    background: #fff;
+    height: 33px;
+}
+
+.s-menu a:hover{
+    color: #FF0036;
+}
+.s-menu-2 a:hover {
+    text-decoration: underline;
+}
+
+.s-menu-2:hover::after {
+    transform: rotate(180deg);
+    /*top: 12px;*/
+}
+
+.s-menu-2::after {
+    border: 3px solid;
+    border-color: #999 transparent transparent transparent;
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 6px;
+    top: 15px;
+    transition: all 0.1s linear;
+    transform-origin: 3px 1.5px; /*水平 垂直 点为中心旋转*/
+}
+
+#s-menu-3 a:hover {
+    text-decoration: none;
+}
+
+.sub-s-menu {
+    background: #fff;
+    border: 1px solid #eee;
+    border-top: none;
+    padding: 10px 8px;
+    position: absolute; /*相对li定位*/
+    left: -1px;
+    top: 33px;
+    width: 74px;
+    display: none; /*隐藏*/
+}
+
+.sub-s-menu-1 {
+    line-height: 18px;
+    height: 18px;
+}
+
+.sub-s-menu-1 a {
+    color: #999;
+}
+
+.s-menu-2:hover .sub-s-menu {
+    display: block;
+    z-index: 1000;
+}
+
+.icon-gouwuche-copy,.icon-phone,.icon-liebiao{
+    font-size: 14px;
+    color: #FF0036;
+}
+
+/*tmall nav-end*/
+
+/*弹层开始*/
+
+/*手机版弹层*/
+#mask{
+    position:fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background-color:#000;
+    opacity:0.6;
+    z-index:1000;
+    display: none;
+}
+
+#mask-1{
+    position:fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    width: 200px;
+    height: 200px;
+    display: none;
+    margin: auto;
+    z-index: 1100;
+}
+#pop-up{
+    position: relative;
+    z-index: 1200;
+}
+
+/*登录弹层*/
+#login{
+    display: none;
+    position: fixed;
+    z-index: 1201;
+    width: 1349px;
+    height: 638px;
+}
+#login-bg{
+    width: 100%;
+    height: 100%;
+}
+#log{
+    background: white;
+    position: absolute;
+    top: 125px;
+    right: 125px;
+    width: 300px;
+    height: 300px;
+}
+#login-code,#login-text{
+    margin:auto;
+    margin-top: 48px;
+    width: 140px;
+}
+#login-text input{
+    width: 140px;
+    height: 30px;
+    margin-bottom: 8px;
+}
+#login-text #denglu{
+    width: 144px;
+}
+#login-text{
+    display: none;
+}
+#login-code-sao{
+    font-size:20px;
+    margin-bottom: 8px;
+    margin-left: 6px;
+}
+#login-code-mi{
+    font-size:20px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.login-input a{
+    font-size:16px;
+    margin-top: 8px;
+    margin-left: 4px;
+    color: #000000;
+}
+.login-input a:hover{
+    color: #00d7dc;
+}
+#denglu:hover{
+    background: #00d7dc;
+    color: #FFF;
+    border: none;
+}
+
+/*弹层结束*/
+
+/*小火箭开始*/
+#fire {
+    width: 34px;
+    height: 66px;
+    background: url(../../dom/小火箭/go-top.jpeg) -22px -5px no-repeat;
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    z-index: 1000;
+}
+
+#fire:hover {
+    background-position: -113px -4px;
+}
+
+/*小火箭结束*/
+
+/*右键*/
+#ul1 {
+    width: 220px;
+    border: 1px solid #999;
+    /*border-radius: 10px;*/
+    list-style: none;
+    display: none;
+    position: absolute;
+    background: white;
+    z-index: 200;
+}
+
+#ul1 li {
+    padding-left: 40px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    color: #555;
+    font-size: 12px;
+}
+
+#ul1 li:hover {
+    background: deepskyblue;
+    color: #fff;
+}
+
+/*右键结束*/
+
+/*底部开始*/
+.after-sell {
+    background: white;
+    height: 49px;
+    border-top: 1px solid #D1D7DC;
+}
+
+.after-sell span {
+    margin: 11px auto;
+    display: block;
+    font-size: 20px;
+    color: #81d439;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*底部结束*/
